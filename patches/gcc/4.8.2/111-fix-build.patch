@@ -1,0 +1,10 @@
+--- gcc-4.8.2/gcc/cp/cfns.h	2019-12-04 12:18:16.635727535 +0000
++++ gcc-4.8.2_patch/gcc/cp/cfns.h	2019-12-04 12:20:23.386776316 +0000
+@@ -124,6 +124,7 @@
+ 
+ #ifdef __GNUC__
+ __inline
++#else // this makes only one attribute applied
+ #ifdef __GNUC_STDC_INLINE__
+ __attribute__ ((__gnu_inline__))
+ #endif
